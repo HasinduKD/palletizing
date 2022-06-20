@@ -22,9 +22,8 @@
                     />
             </StackPanel>
         </StackPanel>
-        <StackPanel Margin="0,140,10,0" Orientation="Horizontal">
-            
-                <Button
+        <StackPanel Margin="0,140,10,499" Orientation="Horizontal">
+            <Button
                     x:Name="Button_Add_Box"
                     Width="165"
                     Height="72"
@@ -34,6 +33,7 @@
                     ToolTip="Click to add box"
                     HorizontalAlignment="Left" 
                     VerticalAlignment="Top"
+                    Click="Button_Add_Box_Click"
                     Visibility="Visible" 
                     />
             <Button
@@ -46,8 +46,24 @@
                     ToolTip="Click to add pallet"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
-                    Visibility="Visible" IsEnabled="False" RenderTransformOrigin="0.365,-0.833" />
-            
+                    Click="Button_Add_Pallet_Click"
+                    Visibility="Visible"  
+                    />
+        </StackPanel>
+        <StackPanel Margin="10,582,0,0">
+            <Button
+                    x:Name="Button_Calculate"
+                    Width="165"
+                    Height="72"
+                    Margin="20,50,0,0"
+                    Content="Calculate"
+                    FontSize="16"
+                    ToolTip="Calculate all possible arrangement"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Click="Button_Calculate_Click"
+                    Visibility="Visible"  
+                    />
         </StackPanel>
     </Grid>
 </Window>

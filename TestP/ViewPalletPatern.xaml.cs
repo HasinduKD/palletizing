@@ -21,7 +21,30 @@ namespace TestP
     {
         public ViewPalletPatern()
         {
-            
+            InitializeComponent();
+        }
+        private void Button_Add_Box_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: Handling Add box click
+            ViewAddNewBox viewAddNewBox = new ViewAddNewBox();
+            viewAddNewBox.Show();
+
+
+        }
+
+        private void Button_Add_Pallet_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: Handling Add pallet click
+        }
+
+
+
+        
+
+        private void Button_Calculate_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO: Handling calculate stuff
+            MessageBox.Show("The button calculate has been clicked", "Information Message");
         }
     }
 }

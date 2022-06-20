@@ -64,6 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewAddNewBox.xaml.cs">
+      <DependentUpon>ViewAddNewBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewPalletPatern.xaml.cs">
       <DependentUpon>ViewPalletPatern.xaml</DependentUpon>
     </Compile>
@@ -80,6 +83,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ViewAddNewBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="ViewPalletPatern.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

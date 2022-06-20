@@ -15,10 +15,7 @@ namespace TestP
     /// </summary>
     public partial class MainWindow : Window
     {
-        public AppControllerData AppControllerData {
-            get; 
-            private set; 
-        }
+        public AppControllerData AppControllerData { get; private set; }
 
         public MainWindow()
         {
@@ -109,8 +106,11 @@ namespace TestP
         private void Button_View_Pallet_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            Application.Current.MainWindow.Height = 750;
-            Application.Current.MainWindow.Width = 1200;
+            // MessageBox.Show("The button labeled has been clicked", "Information Message");
+            ViewPalletPatern viewPalletPatern = new ViewPalletPatern();
+            viewPalletPatern.Show();
+
+            
 
         }
         private void Rd_ValueChanged(object sender, DataValueChangedEventArgs e)

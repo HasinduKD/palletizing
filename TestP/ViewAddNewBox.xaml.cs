@@ -17,9 +17,9 @@ namespace TestP
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class ViewAddNewBox : Window
     {
-        public Window1()
+        public ViewAddNewBox()
         {
             InitializeComponent();
         }
