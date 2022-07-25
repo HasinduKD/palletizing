@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Collections.Generic;
@@ -174,6 +175,9 @@ namespace Demo
 
                 AppControllerData.Tasks = AppControllerData.SelectedController.Rapid.GetTasks().ToList();
                 SetDropDownTaskData();
+                string msg = DateTime.Now + " " + "Controller changed to" + " " + comboBoxControllers.SelectedItem.ToString();
+                txtV1ExecutionLog.AppendText(msg);
+                txtV1ExecutionLog.AppendText(Environment.NewLine);
             }
         }
 
@@ -192,6 +196,9 @@ namespace Demo
 
                 AppControllerData.Modules = AppControllerData.SelectedTask.GetModules().ToList();
                 SetDropDownModuleData();
+                string msg = DateTime.Now + " " + "Task changed to" + " " + comboBoxTasks.SelectedItem.ToString();
+                txtV1ExecutionLog.AppendText(msg);
+                txtV1ExecutionLog.AppendText(Environment.NewLine);
             }
         }
 
@@ -199,8 +206,7 @@ namespace Demo
         {
             if (ddTP1Module.SelectedIndex != -1)
             {
-                btTP1RobotSpeed.Visible = true;
-                btTP1ConveySpeed.Visible = true;
+                btTP1RobotSpeed.Enabled = true;
                 var comboBoxModules = sender as ComboBox;
                 AppControllerData.SelectedModule = comboBoxModules.SelectedItem as Module;
                 AppControllerData.RapidVariables?.Clear();
@@ -209,6 +215,9 @@ namespace Demo
                     return;
 
                 AppControllerData.RapidVariables = AppControllerData.SelectedModule.SearchRapidSymbol(RapidSymbolSearchProperties.CreateDefaultForData()).ToList();
+                string msg = DateTime.Now + " " + "Module changed to" + " " + comboBoxModules.SelectedItem.ToString();
+                txtV1ExecutionLog.AppendText(msg);
+                txtV1ExecutionLog.AppendText(Environment.NewLine);
             }
         }
 
@@ -231,6 +240,11 @@ namespace Demo
                     Rb_speed = AppControllerData.SelectedModule.GetRapidData("RobotSpeed");
                     Rb_speed.Value = v;
                     master.Release();
+                    string msg = DateTime.Now + " " + "Robot Speed changed to" + " " + v.ToString();
+                    txtV1ExecutionLog.AppendText(msg);
+                    txtV1ExecutionLog.AppendText(Environment.NewLine);
+                    btTP2Start.Enabled = true;
+                    btTP2Stop.Enabled = true;
                 }
                 catch (Exception ex)
                 {
@@ -277,8 +291,8 @@ namespace Demo
 
         private void btTP2Start_Click(object sender, EventArgs e)
         {
-            btTP1RobotSpeed.Visible = false;
-            btTP1ConveySpeed.Visible = false;
+            btTP1RobotSpeed.Enabled = false;
+            btTP2Reset.Enabled = false;
             try
             {
                 if (AppControllerData.SelectedController.OperatingMode == ControllerOperatingMode.Auto)
@@ -322,8 +336,8 @@ namespace Demo
 
         private void btTP2Stop_Click(object sender, EventArgs e)
         {
-            btTP1RobotSpeed.Visible = true;
-            btTP1ConveySpeed.Visible = true;
+            btTP1RobotSpeed.Enabled = true;
+            btTP2Reset.Enabled = true;
             try
             {
                 if (AppControllerData.SelectedController.OperatingMode == ControllerOperatingMode.Auto)
@@ -354,8 +368,7 @@ namespace Demo
 
         private void btTP2Reset_Click(object sender, EventArgs e)
         {
-            btTP1RobotSpeed.Visible = false;
-            btTP1ConveySpeed.Visible = false;
+            btTP1RobotSpeed.Enabled = false;
             try
             {
                 if (AppControllerData.SelectedController.OperatingMode == ControllerOperatingMode.Auto)
@@ -374,6 +387,7 @@ namespace Demo
                             {
                                 if (AppControllerData.SelectedTask.ExecutionStatus.Equals(TaskExecutionStatus.Stopped))
                                     AppControllerData.SelectedTask.ResetProgramPointer();
+                                    txtV1ExecutionLog.Clear();
 
                                 AppControllerData.SelectedController.Rapid.Start(RegainMode.Continue, ExecutionMode.Continuous, ExecutionCycle.AsIs, StartCheck.None, true, TaskPanelExecutionMode.NormalTasks);
                             }
@@ -403,6 +417,25 @@ namespace Demo
         {
             string selectedPallet = ddTP1Pallet.SelectedItem.ToString();
             //MessageBox.Show("selected pallet is {0}", selectedPallet);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmCustermerDetails.ShowDialog(this, new FrmCustermerDetails());
+            //using (var reader = new StreamReader("C:\\Users\\ASUS\\Desktop\\customer_order.csv"))
+            //{
+            //    List<string> listA = new List<string>();
+            //    List<string> listB = new List<string>();
+            //    while (!reader.EndOfStream)
+            //    {
+            //        var line = reader.ReadLine();
+            //        var values = line.Split(',');
+
+            //        listA.Add(values[0]);
+            //        listB.Add(values[1]);
+            //    }
+            //    FrmCustermerDetails cus = new FrmCustermerDetails(listA);
+            //}
         }
     }
 }

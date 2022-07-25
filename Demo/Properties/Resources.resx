@@ -148,4 +148,10 @@
   <data name="box_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\box_image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="png_transparent_computer_icons_refresh_save_miscellaneous_blue_thumbnail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-computer-icons-refresh-save-miscellaneous-blue-thumbnail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="View_refresh_Gion_svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\View-refresh_Gion.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

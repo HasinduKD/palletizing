@@ -159,5 +159,25 @@ namespace Demo.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_computer_icons_refresh_save_miscellaneous_blue_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("png_transparent_computer_icons_refresh_save_miscellaneous_blue_thumbnail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap View_refresh_Gion_svg {
+            get {
+                object obj = ResourceManager.GetObject("View_refresh_Gion_svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

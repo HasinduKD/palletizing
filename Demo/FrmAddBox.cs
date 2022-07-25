@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -92,9 +94,26 @@ namespace Demo
         private void btTPAddBoxClear_Click(object sender, EventArgs e)
         {
             txtV1T1UserId.Clear();
+            textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
             textBox4.Clear();
+        }
+
+        private void btnV1T1Add_Click(object sender, EventArgs e)
+        {
+            StringBuilder csvcontent = new StringBuilder();
+            var id = textBox1.Text.ToString();
+            var length = txtV1T1UserId.Text.ToString();
+            var width = textBox2.Text.ToString();
+            var height = textBox3.Text.ToString();
+            var weight = textBox4.Text.ToString();
+
+            var newLine = string.Format("{0}, {1}, {2}, {3}, {4}", id, length, width, height, weight);
+            csvcontent.AppendLine(newLine);
+            string csvpath = "C:\\Users\\ASUS\\Desktop\\box_data.csv";
+            File.AppendAllText(csvpath, csvcontent.ToString());
+            this.Close();
         }
     }
 }

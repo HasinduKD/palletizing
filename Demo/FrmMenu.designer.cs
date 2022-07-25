@@ -46,7 +46,8 @@
             this.btTP2Reset = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btTP1RobotSpeed = new System.Windows.Forms.Button();
-            this.btTP1ConveySpeed = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.Home = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -59,14 +60,12 @@
             this.txtTP1RobotSpeed = new System.Windows.Forms.TextBox();
             this.lblV1T1Password = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ddlTP1Controller = new System.Windows.Forms.ComboBox();
             this.lblV1T1UserId = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Stacking = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -80,7 +79,7 @@
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.ddTP1Pallet = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Control = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -112,14 +111,14 @@
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.Stacking.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.Control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -308,6 +307,7 @@
             // 
             this.btTP2Start.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
             this.btTP2Start.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btTP2Start.Enabled = false;
             this.btTP2Start.FlatAppearance.BorderSize = 0;
             this.btTP2Start.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.btTP2Start.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -325,6 +325,7 @@
             // 
             this.btTP2Stop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
             this.btTP2Stop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btTP2Stop.Enabled = false;
             this.btTP2Stop.FlatAppearance.BorderSize = 0;
             this.btTP2Stop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.btTP2Stop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -342,6 +343,7 @@
             // 
             this.btTP2Reset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
             this.btTP2Reset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btTP2Reset.Enabled = false;
             this.btTP2Reset.FlatAppearance.BorderSize = 0;
             this.btTP2Reset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.btTP2Reset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -363,7 +365,7 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(86, 72);
+            this.button3.Location = new System.Drawing.Point(100, 72);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(147, 35);
             this.button3.TabIndex = 306;
@@ -376,6 +378,7 @@
             // 
             this.btTP1RobotSpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
             this.btTP1RobotSpeed.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btTP1RobotSpeed.Enabled = false;
             this.btTP1RobotSpeed.FlatAppearance.BorderSize = 0;
             this.btTP1RobotSpeed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.btTP1RobotSpeed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -387,25 +390,41 @@
             this.btTP1RobotSpeed.Text = "&Verify";
             this.ttV1ToolTip.SetToolTip(this.btTP1RobotSpeed, "Verify..");
             this.btTP1RobotSpeed.UseVisualStyleBackColor = false;
-            this.btTP1RobotSpeed.Visible = false;
             this.btTP1RobotSpeed.Click += new System.EventHandler(this.btTP1RobotSpeed_Click);
             // 
-            // btTP1ConveySpeed
+            // button1
             // 
-            this.btTP1ConveySpeed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
-            this.btTP1ConveySpeed.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btTP1ConveySpeed.FlatAppearance.BorderSize = 0;
-            this.btTP1ConveySpeed.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.btTP1ConveySpeed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btTP1ConveySpeed.ForeColor = System.Drawing.Color.White;
-            this.btTP1ConveySpeed.Location = new System.Drawing.Point(188, 140);
-            this.btTP1ConveySpeed.Name = "btTP1ConveySpeed";
-            this.btTP1ConveySpeed.Size = new System.Drawing.Size(100, 35);
-            this.btTP1ConveySpeed.TabIndex = 307;
-            this.btTP1ConveySpeed.Text = "&Verify";
-            this.ttV1ToolTip.SetToolTip(this.btTP1ConveySpeed, "Verify..");
-            this.btTP1ConveySpeed.UseVisualStyleBackColor = false;
-            this.btTP1ConveySpeed.Visible = false;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Enabled = false;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(215, 117);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 35);
+            this.button1.TabIndex = 313;
+            this.button1.Text = "&Verify";
+            this.ttV1ToolTip.SetToolTip(this.button1, "Start..");
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(100, 72);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(147, 35);
+            this.button2.TabIndex = 306;
+            this.button2.Text = "&Import";
+            this.ttV1ToolTip.SetToolTip(this.button2, "Add new box..");
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // TabControl
             // 
@@ -413,8 +432,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TabControl.Controls.Add(this.Home);
-            this.TabControl.Controls.Add(this.tabPage1);
-            this.TabControl.Controls.Add(this.tabPage2);
+            this.TabControl.Controls.Add(this.Stacking);
+            this.TabControl.Controls.Add(this.Control);
             this.TabControl.Controls.Add(this.LOG);
             this.TabControl.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabControl.ImageList = this.TabControlImageList;
@@ -432,7 +451,6 @@
             this.Home.Controls.Add(this.groupBox5);
             this.Home.Controls.Add(this.groupBox4);
             this.Home.Controls.Add(this.groupBox3);
-            this.Home.Controls.Add(this.groupBox2);
             this.Home.Controls.Add(this.groupBox1);
             this.Home.ImageKey = "Home_Icon.png";
             this.Home.Location = new System.Drawing.Point(4, 54);
@@ -568,53 +586,6 @@
             this.label4.Text = "&Robot Speed";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btTP1ConveySpeed);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(670, 272);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(328, 202);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(117, 80);
-            this.textBox1.MaxLength = 14;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(168, 30);
-            this.textBox1.TabIndex = 306;
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(14, 80);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 30);
-            this.label5.TabIndex = 305;
-            this.label5.Text = "CN Speed :";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Gainsboro;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(3, 26);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(322, 36);
-            this.label3.TabIndex = 302;
-            this.label3.Text = "&Convey Speed";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.ddlTP1Controller);
@@ -654,24 +625,49 @@
             this.lblV1T1UserId.Text = "&Controller";
             this.lblV1T1UserId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tabPage1
+            // Stacking
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.White;
-            this.tabPage1.Controls.Add(this.pictureBox2);
-            this.tabPage1.Controls.Add(this.textBox7);
-            this.tabPage1.Controls.Add(this.label19);
-            this.tabPage1.Controls.Add(this.textBox8);
-            this.tabPage1.Controls.Add(this.label20);
-            this.tabPage1.Controls.Add(this.groupBox9);
-            this.tabPage1.Controls.Add(this.groupBox10);
-            this.tabPage1.Controls.Add(this.groupBox11);
-            this.tabPage1.ImageKey = "Icon_3.jpeg";
-            this.tabPage1.Location = new System.Drawing.Point(4, 54);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1130, 670);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "tabPage1";
+            this.Stacking.BackColor = System.Drawing.Color.White;
+            this.Stacking.Controls.Add(this.groupBox2);
+            this.Stacking.Controls.Add(this.pictureBox2);
+            this.Stacking.Controls.Add(this.textBox7);
+            this.Stacking.Controls.Add(this.label19);
+            this.Stacking.Controls.Add(this.textBox8);
+            this.Stacking.Controls.Add(this.label20);
+            this.Stacking.Controls.Add(this.groupBox9);
+            this.Stacking.Controls.Add(this.groupBox10);
+            this.Stacking.Controls.Add(this.groupBox11);
+            this.Stacking.ImageKey = "Icon_3.jpeg";
+            this.Stacking.Location = new System.Drawing.Point(4, 54);
+            this.Stacking.Name = "Stacking";
+            this.Stacking.Padding = new System.Windows.Forms.Padding(3);
+            this.Stacking.Size = new System.Drawing.Size(1130, 670);
+            this.Stacking.TabIndex = 2;
+            this.Stacking.Text = "STACKING";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Location = new System.Drawing.Point(96, 332);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(340, 125);
+            this.groupBox2.TabIndex = 313;
+            this.groupBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Gainsboro;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(3, 26);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(334, 36);
+            this.label3.TabIndex = 302;
+            this.label3.Text = "&Import Customer Order";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
@@ -691,10 +687,10 @@
             this.textBox7.BackColor = System.Drawing.Color.White;
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(854, 474);
+            this.textBox7.Location = new System.Drawing.Point(905, 469);
             this.textBox7.MaxLength = 50;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(109, 30);
+            this.textBox7.Size = new System.Drawing.Size(110, 30);
             this.textBox7.TabIndex = 310;
             // 
             // label19
@@ -702,7 +698,7 @@
             this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(695, 469);
+            this.label19.Location = new System.Drawing.Point(746, 471);
             this.label19.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(153, 22);
@@ -716,7 +712,7 @@
             this.textBox8.BackColor = System.Drawing.Color.White;
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox8.ForeColor = System.Drawing.Color.Black;
-            this.textBox8.Location = new System.Drawing.Point(854, 431);
+            this.textBox8.Location = new System.Drawing.Point(905, 431);
             this.textBox8.MaxLength = 50;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(110, 30);
@@ -727,7 +723,7 @@
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(698, 431);
+            this.label20.Location = new System.Drawing.Point(749, 433);
             this.label20.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(150, 22);
@@ -739,7 +735,7 @@
             // 
             this.groupBox9.Controls.Add(this.button3);
             this.groupBox9.Controls.Add(this.label16);
-            this.groupBox9.Location = new System.Drawing.Point(95, 215);
+            this.groupBox9.Location = new System.Drawing.Point(95, 175);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(340, 125);
             this.groupBox9.TabIndex = 7;
@@ -761,11 +757,12 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.button1);
             this.groupBox10.Controls.Add(this.comboBox4);
             this.groupBox10.Controls.Add(this.label17);
-            this.groupBox10.Location = new System.Drawing.Point(95, 384);
+            this.groupBox10.Location = new System.Drawing.Point(95, 478);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(340, 125);
+            this.groupBox10.Size = new System.Drawing.Size(340, 165);
             this.groupBox10.TabIndex = 6;
             this.groupBox10.TabStop = false;
             // 
@@ -837,20 +834,20 @@
             this.label18.Text = "&Select Pallet";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tabPage2
+            // Control
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.White;
-            this.tabPage2.Controls.Add(this.pictureBox1);
-            this.tabPage2.Controls.Add(this.groupBox8);
-            this.tabPage2.Controls.Add(this.groupBox7);
-            this.tabPage2.Controls.Add(this.groupBox6);
-            this.tabPage2.ImageKey = "Icon_2.jpeg";
-            this.tabPage2.Location = new System.Drawing.Point(4, 54);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1130, 670);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.Control.BackColor = System.Drawing.Color.White;
+            this.Control.Controls.Add(this.pictureBox1);
+            this.Control.Controls.Add(this.groupBox8);
+            this.Control.Controls.Add(this.groupBox7);
+            this.Control.Controls.Add(this.groupBox6);
+            this.Control.ImageKey = "Icon_2.jpeg";
+            this.Control.Location = new System.Drawing.Point(4, 54);
+            this.Control.Name = "Control";
+            this.Control.Padding = new System.Windows.Forms.Padding(3);
+            this.Control.Size = new System.Drawing.Size(1130, 670);
+            this.Control.TabIndex = 1;
+            this.Control.Text = "CONTROL";
             // 
             // pictureBox1
             // 
@@ -989,8 +986,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Controls.Add(this.textBox6);
             this.groupBox7.Controls.Add(this.label15);
             this.groupBox7.Controls.Add(this.textBox5);
@@ -1135,8 +1131,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtV1ExecutionLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(45)))), ((int)(((byte)(50)))));
             this.txtV1ExecutionLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtV1ExecutionLog.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtV1ExecutionLog.ForeColor = System.Drawing.Color.White;
+            this.txtV1ExecutionLog.Font = new System.Drawing.Font("Courier New", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtV1ExecutionLog.ForeColor = System.Drawing.Color.LimeGreen;
             this.txtV1ExecutionLog.Location = new System.Drawing.Point(19, 28);
             this.txtV1ExecutionLog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtV1ExecutionLog.Multiline = true;
@@ -1185,16 +1181,15 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.Stacking.ResumeLayout(false);
+            this.Stacking.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.Control.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
@@ -1221,27 +1216,23 @@
         private System.Windows.Forms.ToolTip ttV1ToolTip;
         private System.Windows.Forms.TabControl TabControl;
         private System.Windows.Forms.TabPage Home;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage Control;
+        private System.Windows.Forms.TabPage Stacking;
         private System.Windows.Forms.TabPage LOG;
         private System.Windows.Forms.ImageList TabControlImageList;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox ddTP1Task;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox ddTP1Module;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox ddlTP1Controller;
         private System.Windows.Forms.Label lblV1T1UserId;
         private System.Windows.Forms.TextBox txtTP1RobotSpeed;
         private System.Windows.Forms.Label lblV1T1Password;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox7;
@@ -1280,11 +1271,14 @@
         private System.Windows.Forms.ComboBox ddTP1Pallet;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.TextBox txtV1ExecutionLog;
         private System.Windows.Forms.Button btTP1RobotSpeed;
-        private System.Windows.Forms.Button btTP1ConveySpeed;
         private System.Windows.Forms.Label label_date;
         private System.Windows.Forms.Label label_time;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox txtV1ExecutionLog;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label3;
     }
 }

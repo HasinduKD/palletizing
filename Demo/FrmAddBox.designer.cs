@@ -34,6 +34,12 @@
             this.lblV2FunctionName = new System.Windows.Forms.Label();
             this.btnV2CloseWindow = new System.Windows.Forms.Button();
             this.pnlIWDUploadView2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btTPAddBoxClear = new System.Windows.Forms.Button();
             this.btnV1T1Add = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -107,6 +113,12 @@
             // pnlIWDUploadView2
             // 
             this.pnlIWDUploadView2.BackColor = System.Drawing.Color.White;
+            this.pnlIWDUploadView2.Controls.Add(this.label5);
+            this.pnlIWDUploadView2.Controls.Add(this.label4);
+            this.pnlIWDUploadView2.Controls.Add(this.label3);
+            this.pnlIWDUploadView2.Controls.Add(this.label2);
+            this.pnlIWDUploadView2.Controls.Add(this.textBox1);
+            this.pnlIWDUploadView2.Controls.Add(this.label1);
             this.pnlIWDUploadView2.Controls.Add(this.btTPAddBoxClear);
             this.pnlIWDUploadView2.Controls.Add(this.btnV1T1Add);
             this.pnlIWDUploadView2.Controls.Add(this.pictureBox1);
@@ -125,14 +137,84 @@
             this.pnlIWDUploadView2.TabIndex = 704;
             this.pnlIWDUploadView2.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlIWDUploadView2_Paint);
             // 
+            // label5
+            // 
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(320, 314);
+            this.label5.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 22);
+            this.label5.TabIndex = 326;
+            this.label5.Text = "kg";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(320, 267);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 22);
+            this.label4.TabIndex = 325;
+            this.label4.Text = "cm";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(320, 220);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 22);
+            this.label3.TabIndex = 324;
+            this.label3.Text = "cm";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(320, 171);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 22);
+            this.label2.TabIndex = 323;
+            this.label2.Text = "cm";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(124, 120);
+            this.textBox1.MaxLength = 50;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(190, 26);
+            this.textBox1.TabIndex = 322;
+            // 
+            // label1
+            // 
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(29, 120);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 22);
+            this.label1.TabIndex = 321;
+            this.label1.Text = "&Box ID :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // btTPAddBoxClear
             // 
-            this.btTPAddBoxClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
+            this.btTPAddBoxClear.BackColor = System.Drawing.Color.White;
             this.btTPAddBoxClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btTPAddBoxClear.FlatAppearance.BorderSize = 0;
             this.btTPAddBoxClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.btTPAddBoxClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btTPAddBoxClear.ForeColor = System.Drawing.Color.White;
+            this.btTPAddBoxClear.ForeColor = System.Drawing.Color.Black;
             this.btTPAddBoxClear.Location = new System.Drawing.Point(255, 386);
             this.btTPAddBoxClear.Name = "btTPAddBoxClear";
             this.btTPAddBoxClear.Size = new System.Drawing.Size(100, 35);
@@ -155,6 +237,7 @@
             this.btnV1T1Add.TabIndex = 319;
             this.btnV1T1Add.Text = "&Confirm";
             this.btnV1T1Add.UseVisualStyleBackColor = false;
+            this.btnV1T1Add.Click += new System.EventHandler(this.btnV1T1Add_Click);
             // 
             // pictureBox1
             // 
@@ -175,17 +258,17 @@
             this.textBox4.BackColor = System.Drawing.Color.White;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(123, 302);
+            this.textBox4.Location = new System.Drawing.Point(124, 310);
             this.textBox4.MaxLength = 50;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(232, 26);
+            this.textBox4.Size = new System.Drawing.Size(190, 26);
             this.textBox4.TabIndex = 316;
             // 
             // label13
             // 
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(29, 302);
+            this.label13.Location = new System.Drawing.Point(29, 310);
             this.label13.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(76, 22);
@@ -198,17 +281,17 @@
             this.textBox3.BackColor = System.Drawing.Color.White;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(123, 242);
+            this.textBox3.Location = new System.Drawing.Point(124, 263);
             this.textBox3.MaxLength = 50;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(232, 26);
+            this.textBox3.Size = new System.Drawing.Size(190, 26);
             this.textBox3.TabIndex = 314;
             // 
             // label12
             // 
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(29, 242);
+            this.label12.Location = new System.Drawing.Point(29, 263);
             this.label12.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(76, 22);
@@ -221,17 +304,17 @@
             this.textBox2.BackColor = System.Drawing.Color.White;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(123, 182);
+            this.textBox2.Location = new System.Drawing.Point(124, 216);
             this.textBox2.MaxLength = 50;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(232, 26);
+            this.textBox2.Size = new System.Drawing.Size(190, 26);
             this.textBox2.TabIndex = 312;
             // 
             // label11
             // 
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(29, 182);
+            this.label11.Location = new System.Drawing.Point(29, 216);
             this.label11.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 22);
@@ -244,22 +327,22 @@
             this.txtV1T1UserId.BackColor = System.Drawing.Color.White;
             this.txtV1T1UserId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtV1T1UserId.ForeColor = System.Drawing.Color.Black;
-            this.txtV1T1UserId.Location = new System.Drawing.Point(123, 126);
+            this.txtV1T1UserId.Location = new System.Drawing.Point(124, 167);
             this.txtV1T1UserId.MaxLength = 50;
             this.txtV1T1UserId.Name = "txtV1T1UserId";
-            this.txtV1T1UserId.Size = new System.Drawing.Size(232, 26);
+            this.txtV1T1UserId.Size = new System.Drawing.Size(190, 26);
             this.txtV1T1UserId.TabIndex = 310;
             // 
             // label10
             // 
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(29, 126);
+            this.label10.Location = new System.Drawing.Point(29, 167);
             this.label10.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(76, 22);
             this.label10.TabIndex = 311;
-            this.label10.Text = "&Lenght :";
+            this.label10.Text = "&Length :";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FrmAddBox
@@ -305,5 +388,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btTPAddBoxClear;
         private System.Windows.Forms.Button btnV1T1Add;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

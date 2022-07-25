@@ -1,0 +1,9 @@
+D:\Hasindu\RMIT\Year 4\Sem 10\Capstone A\UI Design\Demo\Demo\Demo\obj\Release\Demo.csproj.AssemblyReference.cache
+D:\Hasindu\RMIT\Year 4\Sem 10\Capstone A\UI Design\Demo\Demo\Demo\obj\Release\Demo.csproj.SuggestedBindingRedirects.cache
+D:\Hasindu\RMIT\Year 4\Sem 10\Capstone A\UI Design\Demo\Demo\Demo\obj\Release\Demo.FrmAddBox.resources
+D:\Hasindu\RMIT\Year 4\Sem 10\Capstone A\UI Design\Demo\Demo\Demo\obj\Release\Demo.FrmCustermerDetails.resources
+D:\Hasindu\RMIT\Year 4\Sem 10\Capstone A\UI Design\Demo\Demo\Demo\obj\Release\Demo.FrmMenu.resources
+D:\Hasindu\RMIT\Year 4\Sem 10\Capstone A\UI Design\Demo\Demo\Demo\obj\Release\Demo.FrmSplash.resources
+D:\Hasindu\RMIT\Year 4\Sem 10\Capstone A\UI Design\Demo\Demo\Demo\obj\Release\Demo.Properties.Resources.resources
+D:\Hasindu\RMIT\Year 4\Sem 10\Capstone A\UI Design\Demo\Demo\Demo\obj\Release\Demo.csproj.GenerateResource.cache
+D:\Hasindu\RMIT\Year 4\Sem 10\Capstone A\UI Design\Demo\Demo\Demo\obj\Release\Demo.csproj.CoreCompileInputs.cache
