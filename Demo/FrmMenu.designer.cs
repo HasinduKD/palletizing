@@ -105,6 +105,7 @@
             this.txtV1ExecutionLog = new System.Windows.Forms.TextBox();
             this.TabControlImageList = new System.Windows.Forms.ImageList(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button4 = new System.Windows.Forms.Button();
             this.pnlV1MenuTop.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.Home.SuspendLayout();
@@ -365,9 +366,9 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(100, 72);
+            this.button3.Location = new System.Drawing.Point(25, 75);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(147, 35);
+            this.button3.Size = new System.Drawing.Size(119, 35);
             this.button3.TabIndex = 306;
             this.button3.Text = "&Add new box";
             this.ttV1ToolTip.SetToolTip(this.button3, "Add new box..");
@@ -733,6 +734,7 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.button4);
             this.groupBox9.Controls.Add(this.button3);
             this.groupBox9.Controls.Add(this.label16);
             this.groupBox9.Location = new System.Drawing.Point(95, 175);
@@ -1156,6 +1158,23 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(196, 75);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(119, 35);
+            this.button4.TabIndex = 307;
+            this.button4.Text = "&Finish";
+            this.ttV1ToolTip.SetToolTip(this.button4, "Add new box..");
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -1280,5 +1299,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button4;
     }
 }

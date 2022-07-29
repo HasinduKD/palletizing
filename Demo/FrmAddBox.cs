@@ -3,6 +3,7 @@ using System.IO;
 using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace Demo
 {
@@ -100,19 +101,49 @@ namespace Demo
             textBox4.Clear();
         }
 
-        private void btnV1T1Add_Click(object sender, EventArgs e)
+        public class company_product
         {
-            StringBuilder csvcontent = new StringBuilder();
+            public int box_id { get; set; }
+            public int box_length { get; set; }
+            public int box_width { get; set; }
+            public int box_height { get; set; }
+            public int box_weight { get; set; }
+
+            //public company_product(int _id, int _length, int _width, int _height, int _weight)
+            //{
+            //    this.box_id = _id;
+            //    this.box_length = _length;
+            //    this.box_width = _width;
+            //    this.box_height = _height;
+            //    this.box_weight = _weight;
+            //}
+        }
+
+        public static List<company_product> products = new List<company_product>();
+
+        public void btnV1T1Add_Click(object sender, EventArgs e)
+        {
+            //StringBuilder csvcontent = new StringBuilder();
             var id = textBox1.Text.ToString();
             var length = txtV1T1UserId.Text.ToString();
             var width = textBox2.Text.ToString();
             var height = textBox3.Text.ToString();
             var weight = textBox4.Text.ToString();
 
-            var newLine = string.Format("{0}, {1}, {2}, {3}, {4}", id, length, width, height, weight);
-            csvcontent.AppendLine(newLine);
-            string csvpath = "C:\\Users\\ASUS\\Desktop\\box_data.csv";
-            File.AppendAllText(csvpath, csvcontent.ToString());
+            //var product = new company_product(int.Parse(id), int.Parse(length), int.Parse(width), int.Parse(height), int.Parse(weight));
+            
+            products.Add(new company_product() {box_id = int.Parse(id), box_length = int.Parse(length), box_width = int.Parse(width), box_height = int.Parse(height), box_weight = int.Parse(weight)});
+            
+            //{
+            //    new company_product{box_id = int.Parse(textBox1.Text.ToString()), box_length = int.Parse(length), box_width = int.Parse(width), box_height = int.Parse(height), box_weight = int.Parse(weight)}
+            //    var nl            
+            //};
+            //var nl = string.Format("{0}, {1}, {2}, {3}, {4}", company_product.box_id, length, width, height, weight);
+
+            //var newLine = string.Format("{0}, {1}, {2}, {3}, {4}", id, length, width, height, weight);
+            //csvcontent.AppendLine(newLine);
+            //string csvpath = "C:\\Users\\ASUS\\Desktop\\box_data.csv";
+            //File.AppendAllText(csvpath, csvcontent.ToString());
             this.Close();
         }
     }

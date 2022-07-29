@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Windows;
 using ABB.Robotics.Controllers;
 using ABB.Robotics.Controllers.Discovery;
 using ABB.Robotics.Controllers.RapidDomain;
+using static Demo.FrmAddBox;
 
 namespace Demo
 {
@@ -76,7 +78,6 @@ namespace Demo
         private void button3_Click(object sender, EventArgs e)
         {
             FrmAddBox.ShowDialog(this, new FrmAddBox());
-
         }
         public static DialogResult ShowDialog(Form parent, Form dialog, string message)
         {
@@ -422,20 +423,58 @@ namespace Demo
         private void button2_Click(object sender, EventArgs e)
         {
             FrmCustermerDetails.ShowDialog(this, new FrmCustermerDetails());
-            //using (var reader = new StreamReader("C:\\Users\\ASUS\\Desktop\\customer_order.csv"))
-            //{
-            //    List<string> listA = new List<string>();
-            //    List<string> listB = new List<string>();
-            //    while (!reader.EndOfStream)
-            //    {
-            //        var line = reader.ReadLine();
-            //        var values = line.Split(',');
+            StringBuilder csvfinal = new StringBuilder();
+            string csvpath = "C:\\Users\\ASUS\\Desktop\\final_list.csv";
+            var header = string.Format("{0}, {1}, {2}, {3}, {4}, {5}", "Box ID", "Length", "Width", "Height", "Weight", "Quantity");
+            csvfinal.AppendLine(header);
 
-            //        listA.Add(values[0]);
-            //        listB.Add(values[1]);
-            //    }
-            //    FrmCustermerDetails cus = new FrmCustermerDetails(listA);
-            //}
+            using (var reader = new StreamReader("C:\\Users\\ASUS\\Desktop\\customer_order.csv"))
+            {
+                List<string> listA = new List<string>();
+                List<string> listB = new List<string>();
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    var values = line.Split(',');
+
+                    listA.Add(values[0]);
+                    listB.Add(values[1]);
+                }
+                foreach (var item in listA)
+                {
+                    foreach (var _item in products)
+                    {
+                        if (item == _item.box_id.ToString())
+                        {
+                            int index = listA.IndexOf(item);
+                            var products_order = string.Format("{0}, {1}, {2}, {3}, {4}, {5}", _item.box_id, _item.box_length, _item.box_width, _item.box_height, _item.box_weight, listB[index]);
+                            csvfinal.AppendLine(products_order);
+                            break;
+                        }
+                        else continue;
+                    }
+                }
+                File.AppendAllText(csvpath, csvfinal.ToString());
+                //var message = string.Join(Environment.NewLine, listA);
+                //MessageBox.Show(message);
+                //    FrmCustermerDetails cus = new FrmCustermerDetails(listA);
+                //}
+            }
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            StringBuilder csvcontent = new StringBuilder();
+            var header = string.Format("{0}, {1}, {2}, {3}, {4}", "Box ID", "Length", "Width", "Height", "Weight");
+            csvcontent.AppendLine(header);
+            string csvpath = "C:\\Users\\ASUS\\Desktop\\box_data.csv";
+
+            foreach (var item in products)
+            {
+                var productsResults = string.Format("{0}, {1}, {2}, {3}, {4}", item.box_id, item.box_length, item.box_width, item.box_height, item.box_weight);
+                csvcontent.AppendLine(productsResults);
+            }
+            File.AppendAllText(csvpath, csvcontent.ToString());
         }
     }
 }
