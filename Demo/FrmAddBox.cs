@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO;
-using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Collections.Generic;
@@ -133,7 +131,6 @@ namespace Demo
             //var product = new company_product(int.Parse(id), int.Parse(length), int.Parse(width), int.Parse(height), int.Parse(weight));
             
             products.Add(new company_product() {box_id = int.Parse(id), box_length = int.Parse(length), box_width = int.Parse(width), box_height = int.Parse(height), box_weight = int.Parse(weight)});
-            
             //{
             //    new company_product{box_id = int.Parse(textBox1.Text.ToString()), box_length = int.Parse(length), box_width = int.Parse(width), box_height = int.Parse(height), box_weight = int.Parse(weight)}
             //    var nl            

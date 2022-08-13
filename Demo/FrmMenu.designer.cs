@@ -48,6 +48,11 @@
             this.btTP1RobotSpeed = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.Home = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -82,12 +87,8 @@
             this.Control = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.txtV1T1UserId = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -105,7 +106,6 @@
             this.txtV1ExecutionLog = new System.Windows.Forms.TextBox();
             this.TabControlImageList = new System.Windows.Forms.ImageList(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button4 = new System.Windows.Forms.Button();
             this.pnlV1MenuTop.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.Home.SuspendLayout();
@@ -409,6 +409,7 @@
             this.button1.Text = "&Verify";
             this.ttV1ToolTip.SetToolTip(this.button1, "Start..");
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -426,6 +427,95 @@
             this.ttV1ToolTip.SetToolTip(this.button2, "Add new box..");
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(196, 75);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(119, 35);
+            this.button4.TabIndex = 307;
+            this.button4.Text = "&Finish";
+            this.ttV1ToolTip.SetToolTip(this.button4, "Add new box..");
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(582, 420);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(147, 35);
+            this.button5.TabIndex = 307;
+            this.button5.Text = "&Choose File";
+            this.ttV1ToolTip.SetToolTip(this.button5, "Add new box..");
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.Enabled = false;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(503, 71);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(59, 35);
+            this.button6.TabIndex = 308;
+            this.button6.Text = "&Lv 1";
+            this.ttV1ToolTip.SetToolTip(this.button6, "Add new box..");
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.Enabled = false;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(503, 136);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(59, 35);
+            this.button7.TabIndex = 314;
+            this.button7.Text = "&Lv 2";
+            this.ttV1ToolTip.SetToolTip(this.button7, "Add new box..");
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.Enabled = false;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(503, 202);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(59, 35);
+            this.button8.TabIndex = 315;
+            this.button8.Text = "&Lv 3";
+            this.ttV1ToolTip.SetToolTip(this.button8, "Add new box..");
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // TabControl
             // 
@@ -629,6 +719,10 @@
             // Stacking
             // 
             this.Stacking.BackColor = System.Drawing.Color.White;
+            this.Stacking.Controls.Add(this.button8);
+            this.Stacking.Controls.Add(this.button7);
+            this.Stacking.Controls.Add(this.button6);
+            this.Stacking.Controls.Add(this.button5);
             this.Stacking.Controls.Add(this.groupBox2);
             this.Stacking.Controls.Add(this.pictureBox2);
             this.Stacking.Controls.Add(this.textBox7);
@@ -676,9 +770,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.BackColor = System.Drawing.Color.Gray;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Location = new System.Drawing.Point(582, 47);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(433, 358);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 312;
             this.pictureBox2.TabStop = false;
             // 
@@ -865,66 +961,28 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.textBox4);
-            this.groupBox8.Controls.Add(this.label13);
-            this.groupBox8.Controls.Add(this.textBox3);
-            this.groupBox8.Controls.Add(this.label12);
+            this.groupBox8.Controls.Add(this.label5);
             this.groupBox8.Controls.Add(this.textBox2);
-            this.groupBox8.Controls.Add(this.label11);
             this.groupBox8.Controls.Add(this.txtV1T1UserId);
             this.groupBox8.Controls.Add(this.label10);
             this.groupBox8.Controls.Add(this.label8);
             this.groupBox8.Location = new System.Drawing.Point(93, 331);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(382, 215);
+            this.groupBox8.Size = new System.Drawing.Size(382, 154);
             this.groupBox8.TabIndex = 3;
             this.groupBox8.TabStop = false;
             // 
-            // textBox4
+            // label5
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(124, 172);
-            this.textBox4.MaxLength = 50;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(232, 30);
-            this.textBox4.TabIndex = 308;
-            // 
-            // label13
-            // 
-            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(30, 172);
-            this.label13.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 22);
-            this.label13.TabIndex = 309;
-            this.label13.Text = "&Weight :";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(124, 138);
-            this.textBox3.MaxLength = 50;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(232, 30);
-            this.textBox3.TabIndex = 306;
-            // 
-            // label12
-            // 
-            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(30, 138);
-            this.label12.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(76, 22);
-            this.label12.TabIndex = 307;
-            this.label12.Text = "&Height :";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(13, 107);
+            this.label5.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 22);
+            this.label5.TabIndex = 305;
+            this.label5.Text = "&Box 2 ID:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox2
             // 
@@ -936,18 +994,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(232, 30);
             this.textBox2.TabIndex = 304;
-            // 
-            // label11
-            // 
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(30, 105);
-            this.label11.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 22);
-            this.label11.TabIndex = 305;
-            this.label11.Text = "&Width :";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtV1T1UserId
             // 
@@ -964,12 +1010,12 @@
             // 
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(30, 72);
+            this.label10.Location = new System.Drawing.Point(13, 72);
             this.label10.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 22);
+            this.label10.Size = new System.Drawing.Size(93, 22);
             this.label10.TabIndex = 303;
-            this.label10.Text = "&Lenght :";
+            this.label10.Text = "&Box 1 ID:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label8
@@ -1158,23 +1204,6 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(196, 75);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 35);
-            this.button4.TabIndex = 307;
-            this.button4.Text = "&Finish";
-            this.ttV1ToolTip.SetToolTip(this.button4, "Add new box..");
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -1260,16 +1289,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtV1T1UserId;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btTP2Reset;
         private System.Windows.Forms.Button btTP2Stop;
         private System.Windows.Forms.Button btTP2Start;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox5;
@@ -1300,5 +1324,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
     }
 }

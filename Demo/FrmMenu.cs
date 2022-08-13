@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Linq;
 using System.Windows;
 using ABB.Robotics.Controllers;
@@ -20,6 +21,8 @@ namespace Demo
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         RapidData Rb_speed;
+        RapidData box_1;
+        RapidData box_2;
         Num v;
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
@@ -27,6 +30,9 @@ namespace Demo
         public static extern bool ReleaseCapture();
         private const int cGrip = 16;      // Grip size
         private const int cCaption = 32;   // Caption bar height;
+
+        private const int PalletWidth = 300;
+        private const int PalletHeight = 300;
 
         public AppControllerData AppControllerData { get; private set; }
 
@@ -40,6 +46,8 @@ namespace Demo
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             
             AppControllerData = new AppControllerData(this);
+
+            Initialize_Graphics(PalletWidth, PalletHeight);
         }
 
         #endregion INITIALIZE      
@@ -288,7 +296,7 @@ namespace Demo
 
         #endregion Homepage
 
-        #region Tabpage2
+        #region ControlPage
 
         private void btTP2Start_Click(object sender, EventArgs e)
         {
@@ -314,6 +322,13 @@ namespace Demo
                                 //    AppControllerData.SelectedTask.ResetProgramPointer();
 
                                 AppControllerData.SelectedController.Rapid.Start(RegainMode.Continue, ExecutionMode.Continuous, ExecutionCycle.AsIs, StartCheck.None, true, TaskPanelExecutionMode.NormalTasks);
+                                string msg = DateTime.Now + " " + "The system has started operation";
+                                txtV1ExecutionLog.AppendText(msg);
+                                txtV1ExecutionLog.AppendText(Environment.NewLine);
+                                box_1 = AppControllerData.SelectedModule.GetRapidData("BoxID_1");
+                                box_2 = AppControllerData.SelectedModule.GetRapidData("BoxID_2");
+                                txtV1T1UserId.Text = box_1.Value.ToString();
+                                textBox2.Text = box_2.Value.ToString();
                             }
 
                             master.Release();
@@ -333,6 +348,7 @@ namespace Demo
             {
                 MessageBox.Show("Unexpected error occurred: " + ex.Message);
             }
+
         }
 
         private void btTP2Stop_Click(object sender, EventArgs e)
@@ -349,6 +365,9 @@ namespace Demo
                         {
                             AppControllerData.SelectedTask.Stop();
                             master.Release();
+                            string msg = DateTime.Now + " " + "The system has stopped operation";
+                            txtV1ExecutionLog.AppendText(msg);
+                            txtV1ExecutionLog.AppendText(Environment.NewLine);
                         }
                         catch (InvalidOperationException ex)
                         {
@@ -391,6 +410,9 @@ namespace Demo
                                     txtV1ExecutionLog.Clear();
 
                                 AppControllerData.SelectedController.Rapid.Start(RegainMode.Continue, ExecutionMode.Continuous, ExecutionCycle.AsIs, StartCheck.None, true, TaskPanelExecutionMode.NormalTasks);
+                                string msg = DateTime.Now + " " + "The system operation has been reset";
+                                txtV1ExecutionLog.AppendText(msg);
+                                txtV1ExecutionLog.AppendText(Environment.NewLine);
                             }
 
                             master.Release();
@@ -412,8 +434,9 @@ namespace Demo
             }
         }
 
-        #endregion Tabpage2
+        #endregion ControlPage
 
+        #region StackingPage
         private void ddTP1Pallet_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedPallet = ddTP1Pallet.SelectedItem.ToString();
@@ -422,6 +445,8 @@ namespace Demo
 
         private void button2_Click(object sender, EventArgs e)
         {
+            button1.Enabled = true;
+
             FrmCustermerDetails.ShowDialog(this, new FrmCustermerDetails());
             StringBuilder csvfinal = new StringBuilder();
             string csvpath = "C:\\Users\\ASUS\\Desktop\\final_list.csv";
@@ -454,7 +479,12 @@ namespace Demo
                         else continue;
                     }
                 }
+                
+                File.WriteAllText(csvpath, string.Empty);
                 File.AppendAllText(csvpath, csvfinal.ToString());
+                string msg = DateTime.Now + " " + "The customer order was imported";
+                txtV1ExecutionLog.AppendText(msg);
+                txtV1ExecutionLog.AppendText(Environment.NewLine);
                 //var message = string.Join(Environment.NewLine, listA);
                 //MessageBox.Show(message);
                 //    FrmCustermerDetails cus = new FrmCustermerDetails(listA);
@@ -464,10 +494,14 @@ namespace Demo
 
         private void button4_Click_1(object sender, EventArgs e)
         {
+            button3.Enabled = false;
+            
             StringBuilder csvcontent = new StringBuilder();
             var header = string.Format("{0}, {1}, {2}, {3}, {4}", "Box ID", "Length", "Width", "Height", "Weight");
             csvcontent.AppendLine(header);
             string csvpath = "C:\\Users\\ASUS\\Desktop\\box_data.csv";
+
+            File.WriteAllText(csvpath, string.Empty);
 
             foreach (var item in products)
             {
@@ -475,6 +509,138 @@ namespace Demo
                 csvcontent.AppendLine(productsResults);
             }
             File.AppendAllText(csvpath, csvcontent.ToString());
+            string msg = DateTime.Now + " " + "A list of new products was created";
+            txtV1ExecutionLog.AppendText(msg);
+            txtV1ExecutionLog.AppendText(Environment.NewLine);
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Draw_Graphics(boxTable, 1);
+            Refresh();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            button6.Enabled = true;
+            button7.Enabled = true;
+            button8.Enabled = true;
+
+            OpenFileDialog finalListFileDialog = new OpenFileDialog()
+            {
+                FileName = "Select a csv file",
+                Filter = "CSV files (*.csv)|*.csv",
+                Title = "Open csv file"
+            };
+
+            if (finalListFileDialog.ShowDialog() != DialogResult.OK) return;
+
+            boxTable = new ReadCSV(finalListFileDialog.FileName).readCSV;
+        }
+
+        private DataTable boxTable;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Draw_Graphics(boxTable, 1);
+            Refresh();
+        }
+
+        Graphics _drawingTable;
+
+        private void Initialize_Graphics(int width, int height)
+        {
+            // increase length and width by one
+            width++;
+            height++;
+
+            // set new bitmap to image
+            pictureBox2.Image = new Bitmap(width, height);
+
+            // set new drawing table Graphics
+            _drawingTable = Graphics.FromImage(pictureBox2.Image);
+
+            // clear drawing table
+            _drawingTable.Clear(Color.White);
+        }
+
+        private void Draw_Graphics(DataTable boxDataTable, int layer)
+        {
+            Pen pencil = new Pen(Color.Black, 1);
+            Brush brush = new SolidBrush(Color.Black);
+            Font font = new Font("Lucida", 8, FontStyle.Regular);
+
+            Rectangle element = new Rectangle();
+            Point indexCoordinates = new Point();
+            Point heightCoordinates = new Point();
+
+            // clear drawing table
+            _drawingTable.Clear(Color.White);
+
+            Random rnd = new Random();
+
+            foreach (DataRow boxRow in boxDataTable.Rows)
+            {
+                // Not in current layer, ignore.
+                if (!int.Parse(boxRow["Layer"].ToString()).Equals(layer)) continue;
+
+                // Not valid coordinate, ignore.
+                if (string.IsNullOrEmpty(boxRow["P1X"].ToString()) || string.IsNullOrEmpty(boxRow["P1Y"].ToString())
+                    || string.IsNullOrEmpty(boxRow["P2X"].ToString()) || string.IsNullOrEmpty(boxRow["P2Y"].ToString())
+                    || string.IsNullOrEmpty(boxRow["P3X"].ToString()) || string.IsNullOrEmpty(boxRow["P3Y"].ToString())
+                    || string.IsNullOrEmpty(boxRow["P4X"].ToString()) || string.IsNullOrEmpty(boxRow["P4Y"].ToString()))
+                    continue;
+
+                // set element width and heigth
+                element.Width = (int.Parse(boxRow["P2X"].ToString()) - int.Parse(boxRow["P1X"].ToString())) * 3;
+                element.Height = (int.Parse(boxRow["P3Y"].ToString()) - int.Parse(boxRow["P2Y"].ToString())) * 3;
+
+                // set element lower left corner coordinates
+                element.X = (int.Parse(boxRow["P4X"].ToString())) * 3;
+                element.Y = PalletHeight - ((int.Parse(boxRow["P4Y"].ToString())) * 3);
+
+                // draw element at DrawingTable
+                //_drawingTable.DrawRectangle(pencil, element);
+
+                SolidBrush blueBrush = new SolidBrush(Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256)));
+                _drawingTable.FillRectangle(blueBrush, element);
+
+                // set index coordinates
+                indexCoordinates.X = element.X;
+                indexCoordinates.Y = element.Y;
+
+                StringFormat format = new StringFormat
+                {
+                    LineAlignment = StringAlignment.Center,
+                    Alignment = StringAlignment.Center
+                };
+
+                heightCoordinates.X = element.Left + element.Width / 2;
+                heightCoordinates.Y = element.Top + element.Height / 2;
+
+                // draw index value
+                _drawingTable.DrawString("ID" + boxRow["Box ID"].ToString(), font, brush, indexCoordinates);
+                _drawingTable.DrawString("H" + boxRow["Height"].ToString(), font, brush, heightCoordinates, format);
+            }
+
+            // release resources
+            pencil.Dispose();
+            brush.Dispose();
+            font.Dispose();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Draw_Graphics(boxTable, 2);
+            Refresh();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Draw_Graphics(boxTable, 3);
+            Refresh();
+        }
+        #endregion StackingPage
+
     }
 }
