@@ -53,6 +53,9 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.btnLvl1ControlTab = new System.Windows.Forms.Button();
+            this.btnLvl2ControlTab = new System.Windows.Forms.Button();
+            this.btnLvl3ControlTab = new System.Windows.Forms.Button();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.Home = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -85,6 +88,8 @@
             this.ddTP1Pallet = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.Control = new System.Windows.Forms.TabPage();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnPrevious = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -450,6 +455,7 @@
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Enabled = false;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -516,6 +522,57 @@
             this.ttV1ToolTip.SetToolTip(this.button8, "Add new box..");
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // btnLvl1ControlTab
+            // 
+            this.btnLvl1ControlTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
+            this.btnLvl1ControlTab.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLvl1ControlTab.FlatAppearance.BorderSize = 0;
+            this.btnLvl1ControlTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnLvl1ControlTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLvl1ControlTab.ForeColor = System.Drawing.Color.White;
+            this.btnLvl1ControlTab.Location = new System.Drawing.Point(579, 78);
+            this.btnLvl1ControlTab.Name = "btnLvl1ControlTab";
+            this.btnLvl1ControlTab.Size = new System.Drawing.Size(59, 35);
+            this.btnLvl1ControlTab.TabIndex = 317;
+            this.btnLvl1ControlTab.Text = "&Lv 1";
+            this.ttV1ToolTip.SetToolTip(this.btnLvl1ControlTab, "Navigate to level 1");
+            this.btnLvl1ControlTab.UseVisualStyleBackColor = false;
+            this.btnLvl1ControlTab.Click += new System.EventHandler(this.btnLvl1ControlTab_Click);
+            // 
+            // btnLvl2ControlTab
+            // 
+            this.btnLvl2ControlTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
+            this.btnLvl2ControlTab.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLvl2ControlTab.FlatAppearance.BorderSize = 0;
+            this.btnLvl2ControlTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnLvl2ControlTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLvl2ControlTab.ForeColor = System.Drawing.Color.White;
+            this.btnLvl2ControlTab.Location = new System.Drawing.Point(579, 133);
+            this.btnLvl2ControlTab.Name = "btnLvl2ControlTab";
+            this.btnLvl2ControlTab.Size = new System.Drawing.Size(59, 35);
+            this.btnLvl2ControlTab.TabIndex = 318;
+            this.btnLvl2ControlTab.Text = "&Lv 2";
+            this.ttV1ToolTip.SetToolTip(this.btnLvl2ControlTab, "Navigate to level 2");
+            this.btnLvl2ControlTab.UseVisualStyleBackColor = false;
+            this.btnLvl2ControlTab.Click += new System.EventHandler(this.btnLvl2ControlTab_Click);
+            // 
+            // btnLvl3ControlTab
+            // 
+            this.btnLvl3ControlTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(118)))), ((int)(((byte)(189)))));
+            this.btnLvl3ControlTab.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLvl3ControlTab.FlatAppearance.BorderSize = 0;
+            this.btnLvl3ControlTab.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btnLvl3ControlTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLvl3ControlTab.ForeColor = System.Drawing.Color.White;
+            this.btnLvl3ControlTab.Location = new System.Drawing.Point(579, 187);
+            this.btnLvl3ControlTab.Name = "btnLvl3ControlTab";
+            this.btnLvl3ControlTab.Size = new System.Drawing.Size(59, 35);
+            this.btnLvl3ControlTab.TabIndex = 319;
+            this.btnLvl3ControlTab.Text = "&Lv 3";
+            this.ttV1ToolTip.SetToolTip(this.btnLvl3ControlTab, "Navigate to level 3");
+            this.btnLvl3ControlTab.UseVisualStyleBackColor = false;
+            this.btnLvl3ControlTab.Click += new System.EventHandler(this.btnLvl3ControlTab_Click);
             // 
             // TabControl
             // 
@@ -653,6 +710,7 @@
             this.txtTP1RobotSpeed.Name = "txtTP1RobotSpeed";
             this.txtTP1RobotSpeed.Size = new System.Drawing.Size(175, 30);
             this.txtTP1RobotSpeed.TabIndex = 304;
+            this.txtTP1RobotSpeed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTP1RobotSpeed_KeyPress);
             // 
             // lblV1T1Password
             // 
@@ -869,12 +927,16 @@
             this.comboBox4.BackColor = System.Drawing.Color.White;
             this.comboBox4.ForeColor = System.Drawing.Color.Black;
             this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Please select a Stacking Algorithm",
+            "Superbox Stacking Algorithm"});
             this.comboBox4.Location = new System.Drawing.Point(25, 76);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(290, 31);
             this.comboBox4.TabIndex = 303;
             this.comboBox4.Text = "Please select a Stacking Algorithm";
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // label17
             // 
@@ -935,6 +997,11 @@
             // Control
             // 
             this.Control.BackColor = System.Drawing.Color.White;
+            this.Control.Controls.Add(this.btnLvl3ControlTab);
+            this.Control.Controls.Add(this.btnLvl2ControlTab);
+            this.Control.Controls.Add(this.btnLvl1ControlTab);
+            this.Control.Controls.Add(this.btnNext);
+            this.Control.Controls.Add(this.btnPrevious);
             this.Control.Controls.Add(this.pictureBox1);
             this.Control.Controls.Add(this.groupBox8);
             this.Control.Controls.Add(this.groupBox7);
@@ -947,15 +1014,49 @@
             this.Control.TabIndex = 1;
             this.Control.Text = "CONTROL";
             // 
+            // btnNext
+            // 
+            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNext.Enabled = false;
+            this.btnNext.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
+            this.btnNext.Location = new System.Drawing.Point(868, 355);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(75, 34);
+            this.btnNext.TabIndex = 7;
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnPrevious.BackColor = System.Drawing.Color.White;
+            this.btnPrevious.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrevious.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrevious.Enabled = false;
+            this.btnPrevious.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnPrevious.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrevious.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevious.Image")));
+            this.btnPrevious.Location = new System.Drawing.Point(733, 355);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(75, 34);
+            this.btnPrevious.TabIndex = 6;
+            this.btnPrevious.UseVisualStyleBackColor = false;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Gray;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(659, 48);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(357, 301);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -1329,5 +1430,10 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnPrevious;
+        private System.Windows.Forms.Button btnLvl3ControlTab;
+        private System.Windows.Forms.Button btnLvl2ControlTab;
+        private System.Windows.Forms.Button btnLvl1ControlTab;
     }
 }

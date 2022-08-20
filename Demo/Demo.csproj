@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppControllerData.cs" />
+    <Compile Include="BoxState.cs" />
     <Compile Include="FrmAddBox.cs">
       <SubType>Form</SubType>
     </Compile>

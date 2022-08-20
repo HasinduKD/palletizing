@@ -90,6 +90,67 @@ namespace Demo
             }
         }
 
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Validate user input for box ID for a 2 digit integer
+            textBox1.MaxLength = 2;
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtV1T1UserId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Validate user input for box length for a 3 digit integer
+            txtV1T1UserId.MaxLength = 3;
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Validate user input for box width for a 3 digit integer
+            textBox2.MaxLength = 3;
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Validate user input for box height for a 3 digit integer
+            textBox3.MaxLength = 3;
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Validate user input for box weight for a 6 digit decimal
+            textBox4.MaxLength = 6;
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void btTPAddBoxClear_Click(object sender, EventArgs e)
         {
             txtV1T1UserId.Clear();
@@ -106,41 +167,19 @@ namespace Demo
             public int box_width { get; set; }
             public int box_height { get; set; }
             public int box_weight { get; set; }
-
-            //public company_product(int _id, int _length, int _width, int _height, int _weight)
-            //{
-            //    this.box_id = _id;
-            //    this.box_length = _length;
-            //    this.box_width = _width;
-            //    this.box_height = _height;
-            //    this.box_weight = _weight;
-            //}
         }
 
         public static List<company_product> products = new List<company_product>();
 
         public void btnV1T1Add_Click(object sender, EventArgs e)
         {
-            //StringBuilder csvcontent = new StringBuilder();
             var id = textBox1.Text.ToString();
             var length = txtV1T1UserId.Text.ToString();
             var width = textBox2.Text.ToString();
             var height = textBox3.Text.ToString();
             var weight = textBox4.Text.ToString();
-
-            //var product = new company_product(int.Parse(id), int.Parse(length), int.Parse(width), int.Parse(height), int.Parse(weight));
             
             products.Add(new company_product() {box_id = int.Parse(id), box_length = int.Parse(length), box_width = int.Parse(width), box_height = int.Parse(height), box_weight = int.Parse(weight)});
-            //{
-            //    new company_product{box_id = int.Parse(textBox1.Text.ToString()), box_length = int.Parse(length), box_width = int.Parse(width), box_height = int.Parse(height), box_weight = int.Parse(weight)}
-            //    var nl            
-            //};
-            //var nl = string.Format("{0}, {1}, {2}, {3}, {4}", company_product.box_id, length, width, height, weight);
-
-            //var newLine = string.Format("{0}, {1}, {2}, {3}, {4}", id, length, width, height, weight);
-            //csvcontent.AppendLine(newLine);
-            //string csvpath = "C:\\Users\\ASUS\\Desktop\\box_data.csv";
-            //File.AppendAllText(csvpath, csvcontent.ToString());
             this.Close();
         }
     }
